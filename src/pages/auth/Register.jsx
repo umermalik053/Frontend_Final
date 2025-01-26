@@ -5,7 +5,7 @@ const Register = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    password: "",
+    cnic:"",
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
@@ -20,8 +20,8 @@ const Register = () => {
     e.preventDefault();
     setLoading(true);
     setMessage("");
-    const { name, email, password } = formData;
-    if (!name || !email || !password) {
+    const { name, email ,cnic} = formData;
+    if (!name || !email || !cnic) {
       setMessage("All field are required");
       setLoading(false);
       return;
@@ -64,12 +64,13 @@ const Register = () => {
           className="w-full border rounded p-2"
         />
         <input
-          type="password"
-          name="password"
-          placeholder="Password"
+          type="text"
+          name="cnic"
+          placeholder="Enter your Cnic number"
           onChange={handleChange}
           className="w-full border rounded p-2"
         />
+       
         <button
           type="submit"
           className="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition disabled:opacity-50"
