@@ -6,7 +6,7 @@ import Register from "../pages/auth/Register";
 import ResetPassword from "../pages/auth/ResetPassword";
 import VerifyEmail from "../pages/auth/VerifyEmail";
 import Home from "../pages/Home";
-import UserDashboard from "@/pages/userDashboard/userDashboard";
+import UserDashboard from "@/pages/userDashboard/UserDashboard";
 import DashboardAdmin from "@/pages/admindashboard/DashboardAdmin";
 import DashboardUser from "@/pages/userDashboard/DashboardUser";
 

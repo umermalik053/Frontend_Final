@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "./button";
 
 const LoanCategoriesForm = () => {
+    const [Loading,setLoading] = useState(false)
     const [calculator, setCalculator] = useState({
         category: "",
         subcategory: "",
@@ -84,11 +85,12 @@ const LoanCategoriesForm = () => {
 
       const handleSubmit = async () =>{
         try {
+            setLoading(true)
           const response =  await createResource("/loan/create", calculator)
           console.log(response);
-            
+          setLoading(false);
         } catch (error) {
-            
+            setLoading(false);
             alert('An error occurred while submitting the form. Please try again.');
         }
       }
@@ -191,7 +193,9 @@ const LoanCategoriesForm = () => {
             </div>
           )}
 
-          <Button onClick={handleSubmit}>Proceed</Button>
+          <Button className="mt-14 w-full" onClick={handleSubmit} disabled={Loading}>{
+        Loading ? "please wait..." : "Proceed"
+        }</Button>
         </div>
       );
 };
