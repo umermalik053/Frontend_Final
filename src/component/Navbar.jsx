@@ -30,13 +30,8 @@ const Navbar = () => {
             onClick={() => navigate("/")}
             className="flex  cursor-pointer items-center space-x-3 rtl:space-x-reverse"
           >
-            <img
-              src="https://flowbite.com/docs/images/logo.svg"
-              className="h-8"
-              alt="Flowbite Logo"
-            />
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-              Flowbite
+            <span className="self-center text-blue-700 font-bold text-2xl whitespace-nowrap dark:text-white">
+              Saylani Mass IT Training
             </span>
           </span>
           <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
